@@ -1,0 +1,4 @@
+@extends('layouts.app', ['title' => 'Deals'])
+@section('content')
+<h1 class="h2 mb-4">Current deals</h1><div class="row g-4">@forelse ($campaigns as $campaign)<div class="col-md-6 col-lg-4"><div class="card border-0 shadow-sm h-100"><div class="card-body"><span class="badge text-bg-success mb-3">{{ $campaign->discount_type === 'percentage' ? $campaign->discount_value.'% off' : 'Rs '.number_format((float) $campaign->discount_value, 2).' off' }}</span><h2 class="h5">{{ $campaign->title }}</h2><p class="text-muted">{{ $campaign->description }}</p>@if ($campaign->promo_code)<p class="small mb-0">Promo code: <strong>{{ $campaign->promo_code }}</strong></p>@endif</div></div></div>@empty<div class="col-12"><div class="card border-0 shadow-sm"><div class="card-body text-center text-muted py-5">No active deals currently.</div></div></div>@endforelse</div><div class="mt-4">{{ $campaigns->links() }}</div>
+@endsection

@@ -1,0 +1,2 @@
+@extends('layouts.app', ['title' => 'Create Campaign'])
+@section('content')<div class="row justify-content-center"><div class="col-lg-8"><h1 class="h2 mb-4">Create campaign</h1>@if ($errors->any())<div class="alert alert-danger"><ul class="mb-0">@foreach ($errors->all() as $error)<li>{{ $error }}</li>@endforeach</ul></div>@endif<div class="card border-0 shadow-sm"><div class="card-body p-4"><form method="POST" action="{{ route('admin.campaigns.store') }}">@include('campaigns._form', ['submitLabel' => 'Create campaign'])</form></div></div></div></div>@endsection
