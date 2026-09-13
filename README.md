@@ -87,6 +87,3 @@ php artisan test
 
 The suite covers authentication, authorization, medicine CRUD, cart and checkout transactions, wallet accounting, campaigns, notifications, ratings, AI safety behavior, and admin reports.
 
-## Project Notes
-
-This is a portfolio-ready academic project. It is appropriate to describe it as a project you designed and developed if that accurately reflects your work. Describe it as a final-year or personal project rather than claiming professional employment experience.
